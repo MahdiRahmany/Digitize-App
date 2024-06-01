@@ -85,7 +85,71 @@
         <!-- product desc. -->
         <div class="flex items-center justify-between w-full mb-3">
           <span class="text-slate-200 text-sm md:text-base">اپل</span>
-          <div>circles</div>
+          <div x-data="{color: 'red'}" class="flex items-center">
+            <div
+              @click="color='red' "
+              :class="color === 'red' ? 'ring-1 ring-red-400': '' "
+              class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-red-400 border-2 border-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-3 stroke-white sm:w-4 sm:h-4"
+                x-show="color ==='red' "
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 12.75 6 6 9-13.5"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color='blue' "
+              :class="color === 'blue' ? 'ring-1 ring-blue-400': '' "
+              class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-blue-400 -mr-1.5 border-2 border-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-3 stroke-white sm:w-4 sm:h-4"
+                x-show="color ==='blue' "
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 12.75 6 6 9-13.5"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color='green' "
+              :class="color === 'green' ? 'ring-1 ring-green-400': '' "
+              class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-green-400 -mr-1.5 border-2 border-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-3 stroke-white sm:w-4 sm:h-4"
+                x-show="color ==='green' "
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 12.75 6 6 9-13.5"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
         <!-- product title -->
         <div class="text-slate-800 text-xs font-bold mb-2 md:text-base">
@@ -109,5 +173,9 @@
       <div class="bg-blue-100">9</div>
       <div class="bg-blue-100">10</div>
     </div>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </body>
 </html>
