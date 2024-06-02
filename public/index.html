@@ -75,111 +75,129 @@
         <span class="text-sm font-medium text-slate-800 mr-3">فیلتر : اپل</span>
       </div>
     </div>
-    <!-- product section -->
     <div
-      x-data="{
-      products: [
-      {id:1 , title: 'ساعت هوشمند اپل سری 7' , price: '١٢,٦٤٥,٦٧٨ تومان'},
-      {id:2 , title: 'ساعت هوشمند اپل سری 6' , price: '١٢,٧٤٥,٦٧٨ تومان'},
-      {id:3 , title: 'ساعت هوشمند اپل سری 8' , price: '١٢,٦٧٨,٦٧٨ تومان'},
-      {id:4 , title: 'ساعت هوشمند اپل سری 5' , price: '١٢,٣٤٥,٦٧٨ تومان'},
-      {id:5 , title: 'ساعت هوشمند اپل سری 4' , price: '١٢,٣٤٥,٣٤٥ تومان'},
-      {id:6 , title: 'ساعت هوشمند اپل سری 9' , price: '١٢,٣٤٥,٢١٢ تومان'}
-      ]
-    }"
-      class="grid gap-x-2 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-2 sm:gap-x-4 md:gap-x-8 md:gap-y-10"
+      class="grid grid-cols-12 md:grid-rows-[55px_minmax(500px,_1fr)] md:gap-8"
     >
-      <!-- single product -->
-      <template x-for="product in products" :key="product.id">
-        <div class="bg-white rounded-xl p-2 shadow-md">
-          <div class="mb-3 bg-gray-100 rounded-xl p-2">
-            <img src="/assets/images/apple-watch-7.png" alt="" />
-          </div>
-          <!-- product desc. -->
-          <div class="flex items-center justify-between w-full mb-3">
-            <span class="text-slate-200 text-sm md:text-base">اپل</span>
-            <div x-data="{color: 'red'}" class="flex items-center">
-              <div
-                @click="color='red' "
-                :class="color === 'red' ? 'ring-1 ring-red-400': '' "
-                class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-red-400 border-2 border-white"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-3 stroke-white sm:w-4 sm:h-4"
-                  x-show="color ==='red' "
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m4.5 12.75 6 6 9-13.5"
-                  />
-                </svg>
+      <!-- sidebar -->
+      <div
+        class="bg-white hidden md:block p-4 col-span-4 lg:col-span-3 row-span-2"
+      >
+        sidebar
+      </div>
+      <!-- sort section -->
+      <div class="bg-white hidden md:block p-4 col-span-8 lg:col-span-9">
+        sort sections
+      </div>
+      <!-- products section -->
+      <div class="col-span-12 md:col-span-8 lg:col-span-9">
+        <div
+          x-data="{
+        products: [
+        {id:1 , title: 'ساعت هوشمند اپل سری 7' , price: '١٢,٦٤٥,٦٧٨ تومان'},
+        {id:2 , title: 'ساعت هوشمند اپل سری 6' , price: '١٢,٧٤٥,٦٧٨ تومان'},
+        {id:3 , title: 'ساعت هوشمند اپل سری 8' , price: '١٢,٦٧٨,٦٧٨ تومان'},
+        {id:4 , title: 'ساعت هوشمند اپل سری 5' , price: '١٢,٣٤٥,٦٧٨ تومان'},
+        {id:5 , title: 'ساعت هوشمند اپل سری 4' , price: '١٢,٣٤٥,٣٤٥ تومان'},
+        {id:6 , title: 'ساعت هوشمند اپل سری 9' , price: '١٢,٣٤٥,٢١٢ تومان'}
+        ]
+      }"
+          class="grid gap-x-2 gap-y-8 grid-cols-2 lg:grid-cols-4 px-2 md:px-0 sm:gap-x-4 md:gap-x-6 md:gap-y-10"
+        >
+          <!-- single product -->
+          <template x-for="product in products" :key="product.id">
+            <div class="bg-white rounded-xl p-2 shadow-md">
+              <div class="mb-3 bg-gray-100 rounded-xl p-2">
+                <img src="/assets/images/apple-watch-7.png" alt="" />
               </div>
-              <div
-                @click="color='blue' "
-                :class="color === 'blue' ? 'ring-1 ring-blue-400': '' "
-                class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-blue-400 -mr-1.5 border-2 border-white"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-3 stroke-white sm:w-4 sm:h-4"
-                  x-show="color ==='blue' "
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m4.5 12.75 6 6 9-13.5"
-                  />
-                </svg>
+              <!-- product desc. -->
+              <div class="flex items-center justify-between w-full mb-3">
+                <span class="text-slate-200 text-sm md:text-base">اپل</span>
+                <div x-data="{color: 'red'}" class="flex items-center">
+                  <div
+                    @click="color='red' "
+                    :class="color === 'red' ? 'ring-1 ring-red-400': '' "
+                    class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-red-400 border-2 border-white"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-3 stroke-white sm:w-4 sm:h-4"
+                      x-show="color ==='red' "
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    @click="color='blue' "
+                    :class="color === 'blue' ? 'ring-1 ring-blue-400': '' "
+                    class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-blue-400 -mr-1.5 border-2 border-white"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-3 stroke-white sm:w-4 sm:h-4"
+                      x-show="color ==='blue' "
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    @click="color='green' "
+                    :class="color === 'green' ? 'ring-1 ring-green-400': '' "
+                    class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-green-400 -mr-1.5 border-2 border-white"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-3 stroke-white sm:w-4 sm:h-4"
+                      x-show="color ==='green' "
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </div>
+              <!-- product title -->
               <div
-                @click="color='green' "
-                :class="color === 'green' ? 'ring-1 ring-green-400': '' "
-                class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-green-400 -mr-1.5 border-2 border-white"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-3 stroke-white sm:w-4 sm:h-4"
-                  x-show="color ==='green' "
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m4.5 12.75 6 6 9-13.5"
-                  />
-                </svg>
-              </div>
+                x-text="product.title"
+                class="text-slate-800 text-xs font-bold mb-2 sm:text-base"
+              ></div>
+              <div
+                x-text="product.price"
+                class="text-orange-600 font-medium text-center sm:text-lg text-sm mb-3"
+              ></div>
+              <hr class="" />
+              <button class="w-full font-bold text-orange-600 py-1 md:text-lg">
+                مشاهده و سفارش
+              </button>
             </div>
-          </div>
-          <!-- product title -->
-          <div
-            x-text="product.title"
-            class="text-slate-800 text-xs font-bold mb-2 md:text-base"
-          ></div>
-          <div
-            x-text="product.price"
-            class="text-orange-600 font-medium text-center text-sm mb-3"
-          ></div>
-          <hr class="" />
-          <button class="w-full font-bold text-orange-600 py-1 md:text-lg">
-            مشاهده و سفارش
-          </button>
+          </template>
         </div>
-      </template>
+      </div>
     </div>
+    <!-- products section -->
+
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
