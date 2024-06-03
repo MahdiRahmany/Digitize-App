@@ -160,9 +160,13 @@
           <div>
             <div class="text-xl font-bold text-orange-500 mb-5">فیلتر</div>
             <!-- ACC. No. 1 -->
-            <div class="">
+            <div
+              x-data="{isOpenBrand: true}"
+              class=""
+            >
               <!-- ACC #1 header -->
               <div
+                @click="isOpenBrand= !isOpenBrand"
                 class="flex items-center justify-between w-full hover:bg-gray-50 rounded-lg p-2 cursor-pointer"
               >
                 <div class="flex items-center">
@@ -204,7 +208,8 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="size-6"
+                  class="size-5 transition-all duration-700"
+                  :class="isOpenBrand ? 'rotate-180' : '' "
                 >
                   <path
                     stroke-linecap="round"
@@ -214,17 +219,44 @@
                 </svg>
               </div>
               <!-- ACC #1 content -->
-              <div class="px-2 flex flex-col gap-y-2">
-                <label for="apple" class="py-1 flex items-center cursor-pointer">
-                  <input type="checkbox" name="brand" id="apple" />
+              <div
+                x-show="isOpenBrand===true"
+                class="px-2 flex flex-col gap-y-2"
+              >
+                <label
+                  for="apple"
+                  class="py-1 flex items-center cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="brand"
+                    id="apple"
+                    class="form-checkbox rounded"
+                  />
                   <span class="mr-2">اپل</span>
                 </label>
-                <label for="xiaumi" class="py-1 flex items-center cursor-pointer">
-                  <input type="checkbox" name="brand" id="xiaumi" />
+                <label
+                  for="xiaumi"
+                  class="py-1 flex items-center cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="brand"
+                    id="xiaumi"
+                    class="form-checkbox rounded"
+                  />
                   <span class="mr-2">شیائومی</span>
                 </label>
-                <label for="huawei" class="py-1 flex items-center cursor-pointer">
-                  <input type="checkbox" name="brand" id="huawei" />
+                <label
+                  for="huawei"
+                  class="py-1 flex items-center cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="brand"
+                    id="huawei"
+                    class="form-checkbox rounded"
+                  />
                   <span class="mr-2">هواوی</span>
                 </label>
               </div>
@@ -239,7 +271,7 @@
       <!-- sort section -->
       <div class="hidden md:block col-span-8 lg:col-span-9">
         <div
-          x-data="{sort:1 , activeClass: 'text-slate-800 font-bold', circle: 'w-2 h-2 bg-orange-600 rounded-full absolute t-1 l-0'}"
+          x-data="{sort:1 , activeClass: 'text-slate-800 font-bold'}"
           class="bg-white px-4 flex items-center gap-x-4 text-gray-400 rounded-lg"
         >
           <div
