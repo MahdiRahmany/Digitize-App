@@ -76,47 +76,76 @@
       </div>
     </div>
     <!-- desktop navbar -->
-    <nav
-      class="bg-white p-4 shadow-lg sticky top-0 flex items-center justify-between z-10"
-    >
-      <ul class="flex items-center gap-x-4 text-slate-800 text-lg">
-        <li>
-          <a
-            class="block px-4 py-2 rounded-md hover:bg-gray-100 transition-all duration-500"
-            href="#"
-            >LOGO</a
-          >
-        </li>
-        <li>
-          <a
-            class="block px-4 py-2 rounded-md hover:bg-gray-100 transition-all duration-500"
-            href="#"
-            >خانه</a
-          >
-        </li>
-        <li>
-          <a
-            class="block px-4 py-2 rounded-md hover:bg-gray-100 transition-all duration-500"
-            href="#"
-            >تلفن همراه</a
-          >
-        </li>
-        <li>
-          <a
-            class="block px-4 py-2 rounded-md hover:bg-gray-100 transition-all duration-500"
-            href="#"
-            >لپ تاپ</a
-          >
-        </li>
-        <li>
-          <a
-            class="block px-4 py-2 rounded-md hover:bg-gray-100 transition-all duration-500"
-            href="#"
-            >ساعت هوشمند</a
-          >
-        </li>
-      </ul>
-      <div class="">search bar</div>
+    <nav class="bg-white hidden md:block p-4 shadow-lg sticky z-10 top-0 mb-8">
+      <div
+        class="container mx-auto max-w-screen-2xl flex items-center justify-between"
+      >
+        <ul
+          class="flex items-center gap-x-0 lg:gap-x-4 text-slate-800 lg:text-lg"
+        >
+          <li>
+            <a
+              class="block px-4 py-2 hover:bg-gray-100 rounded-md ransition-all duration-500"
+              href="#"
+              >LOGO</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-4 py-2 hover:bg-gray-100 rounded-md transition-all duration-500"
+              href="#"
+              >خانه</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-4 py-2 hover:bg-gray-100 rounded-md transition-all duration-500"
+              href="#"
+              >لپ تاپ</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-4 py-2 hover:bg-gray-100 rounded-md ransition-all duration-500"
+              href="#"
+              >ساعت هوشمند</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-4 py-2 hover:bg-gray-100 rounded-md transition-all duration-500"
+              href="#"
+              >تلفن همراه</a
+            >
+          </li>
+        </ul>
+        <!-- search bar -->
+        <div class="flex-1 max-w-xl mr-4">
+          <div class="bg-gray-100 p-1 rounded-lg flex items-center">
+            <label for="search-input" class="ml-3 mr-1 cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                /></svg
+            ></label>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="نام محصول، برند، یا رنگ..."
+              class="bg-transparent w-full p-2 text-slate-800 border-none focus:border-none focus:ring-0 cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
     </nav>
     <!-- content -->
     <div
