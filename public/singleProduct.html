@@ -48,7 +48,7 @@
       </div>
     </div>
     <!-- bread crumbs -->
-    <div class="flex items-center gap-x-2 px-4 text-sm">
+    <div class="flex items-center gap-x-2 px-4 text-sm mb-8">
       <span class="text-orange-500">تلفن همراه</span>
       <span>
         <svg
@@ -79,5 +79,96 @@
       </span>
       <span class="text-gray-500">آیفون 13</span>
     </div>
+    <!-- single product -->
+    <div class="px-4 flex flex-col items-center gap-y-9">
+      <div class="w-4/5 max-w-xs">
+        <img
+          class="w-full h-auto"
+          src="/assets/images/iphone-13-pro-max.webp"
+          alt="iphone-13-pro-max"
+        />
+      </div>
+      <div class="w-full">
+        <div class="mb-8 text-center">
+          <h1 class="text-slate-800 font-bold text-lg mb-1">
+            گوشی آیفون 13 pro max
+          </h1>
+          <h2 class="font-thin text-gray-500">Apple Iphone 13 256 GB</h2>
+        </div>
+        <!-- circle selection -->
+        <div class="flex items-center justify-evenly w-full mb-5">
+          <span class="text-slate-800">انتخاب رنگ:</span>
+          <div x-data="{color: 'red'}" class="flex items-center">
+            <div
+              @click="color='red' "
+              :class="color === 'red' ? 'ring-2 ring-red-400': '' "
+              class="size-7 sm:size-9 flex items-center justify-center rounded-full cursor-pointer bg-red-400 border-2 border-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-4 stroke-white sm:size-6"
+                x-show="color ==='red' "
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 12.75 6 6 9-13.5"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color='blue' "
+              :class="color === 'blue' ? 'ring-2 ring-blue-400': '' "
+              class="size-7 sm:size-9 flex items-center justify-center rounded-full cursor-pointer bg-blue-400 -mr-1.5 border-2 border-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-4 stroke-white sm:size-6"
+                x-show="color ==='blue' "
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 12.75 6 6 9-13.5"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color='green' "
+              :class="color === 'green' ? 'ring-2 ring-green-400': '' "
+              class="size-7 sm:size-9 flex items-center justify-center rounded-full cursor-pointer bg-green-400 -mr-1.5 border-2 border-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-4 stroke-white sm:size-6"
+                x-show="color ==='green' "
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 12.75 6 6 9-13.5"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </body>
 </html>
