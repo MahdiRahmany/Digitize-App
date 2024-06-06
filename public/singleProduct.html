@@ -277,12 +277,12 @@
       </div>
       <!-- products section -->
       <div class="col-span-12 md:col-span-8 lg:col-span-9">
-        <div class="flex bg-white rounded-lg md:p-4">
+        <div class="flex flex-col lg:flex-row md:bg-white rounded-lg md:p-4">
           <!-- single product -->
           <div
             class="px-4 flex flex-col items-center gap-y-9 md:flex-auto md:flex-row md:justify-start md:items-start"
           >
-            <div class="w-4/5 max-w-xs">
+            <div class="w-4/5 max-w-[250] xl:max-w-xs">
               <img
                 class="w-full h-auto"
                 src="/assets/images/iphone-13-pro-max.webp"
@@ -300,7 +300,9 @@
               </div>
               <hr class="hidden md:block mb-8" />
               <!-- color selection -->
-              <div class="flex items-center justify-evenly w-full mb-5 md:justify-start">
+              <div
+                class="flex items-center justify-evenly w-full mb-5 md:justify-start"
+              >
                 <span class="text-slate-800 md:text-lg">انتخاب رنگ:</span>
                 <div x-data="{color: 'red'}" class="flex items-center mr-4">
                   <div
@@ -370,9 +372,9 @@
               </div>
               <!-- seller detail -->
               <div
-                class="text-slate-800 flex flex-wrap gap-x-2 gap-y-3 text-xs md:hidden"
+                class="text-slate-800 flex flex-wrap gap-x-2 gap-y-3 text-xs md:hidden mb-6"
               >
-                <div class="flex items-center bg-red-100 flex-auto">
+                <div class="flex items-center flex-auto">
                   <div class="flex items-center">
                     <span>
                       <svg
@@ -412,7 +414,7 @@
                   </div>
                   <span class="font-light mr-2">دیجی‌تایز</span>
                 </div>
-                <div class="flex items-center bg-red-100 flex-auto">
+                <div class="flex items-center flex-auto">
                   <div class="flex items-center">
                     <span>
                       <svg
@@ -436,7 +438,7 @@
                   </div>
                   <span class="font-light mr-2">18 ماه زرین خدمت</span>
                 </div>
-                <div class="flex items-center bg-red-100 w-full justify-center">
+                <div class="flex items-center w-full justify-center">
                   <div class="flex items-center">
                     <span>
                       <svg
@@ -490,10 +492,36 @@
                   <span class="font-light mr-2">انبار تهران</span>
                 </div>
               </div>
+              <!-- product detail -->
+              <div
+                class="text-slate-700 font-bold bg-white p-4 rounded-lg md:bg-none md:p-0 text-sm"
+              >
+                <h2 class="text-base md:text-xl mb-5">ویژگی های کالا</h2>
+                <ul
+                  class="list-disc text-sm xl:text-lg flex flex-col gap-y-2 marker:text-orange-500 list-inside"
+                >
+                  <li class="flex flex-col gap-y-2 lg:flex-row lg:gap-x-2">
+                    <span class="font-light text-slate-600">حافظه داخلی :</span>
+                    <span>256 گیگابایت</span>
+                  </li>
+                  <li class="flex flex-col gap-y-2 lg:flex-row lg:gap-x-2">
+                    <span class="font-light text-slate-600"
+                      >بازه‌ی اندازه صفحه نمایش :</span
+                    >
+                    <span>0.6 اینچ و بزرگتر</span>
+                  </li>
+                  <li class="flex flex-col gap-y-2 lg:flex-row lg:gap-x-2">
+                    <span class="font-light text-slate-600"
+                      >شبکه‌های ارتباطی :</span
+                    >
+                    <span>2G &bull; 3G &bull; 4G &bull; 5G</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <!-- seller detail -->
-          <div class="w-1/4 bg-red-100"></div>
+          <div class="w-1/4 bg-red-100 hidden md:flex"></div>
         </div>
       </div>
     </div>
