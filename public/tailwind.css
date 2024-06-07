@@ -1128,6 +1128,10 @@ select {
   width: 100%;
 }
 
+.w-3 {
+  width: 0.75rem;
+}
+
 .max-w-\[250px\] {
   max-width: 250px;
 }
@@ -1439,6 +1443,10 @@ select {
   padding: 1.25rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1561,6 +1569,11 @@ select {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-orange-50 {
+  --tw-text-opacity: 1;
+  color: rgb(255 247 237 / var(--tw-text-opacity));
 }
 
 .shadow-\[0_-4px_8px_0_rgba\(0\2c 0\2c 0\2c 0\.1\)\] {
